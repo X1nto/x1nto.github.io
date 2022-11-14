@@ -1,10 +1,10 @@
-import { Component, For, lazy } from 'solid-js'
-import './Home.css'
+import { For } from 'solid-js';
+import './Home.css';
 
 interface SocialMedia {
-  label: string
-  username: string
-  url?: string
+  label: string;
+  username: string;
+  url?: string;
 }
 
 const socialMedia: SocialMedia[] = [
@@ -27,14 +27,14 @@ const socialMedia: SocialMedia[] = [
     username: '@X1nto',
     url: 'https://twitter.com/X1nto',
   },
-]
+];
 
 export default function Home() {
   return (
     <div class="home">
       <div class="home-container">
         <div class="xinto">
-          <img src="/src/assets/xinto.png" />
+          <img src="xinto.png" />
         </div>
         <div class="home-info">
           <h1>Hi, I'm Xinto</h1>
@@ -49,12 +49,12 @@ export default function Home() {
                   <li>
                     {media.label}: <a href={media.url}>{media.username}</a>
                   </li>
-                )
+                );
               }}
             </For>
           </ul>
         </div>
       </div>
     </div>
-  )
+  );
 }
