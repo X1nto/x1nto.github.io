@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: rgb(20, 33, 48);
+    --color-on-background: rgb(170, 196, 245);
+    --color-surface: rgb(45, 63, 85);
+    --color-outline: rgb(141, 181, 226);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: rgb(209, 218, 230);
+    --color-on-background: rgb(69, 95, 143);
+    --color-surface: rgb(46, 86, 129);
+    --color-outline: rgb(66, 98, 136);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: 'Inter';
+  height: 100vh;
+  width: 100vw;
+}
+
+a {
+  color: var(--color-on-background);
+}

@@ -1,0 +1,60 @@
+import { Component, For, lazy } from 'solid-js'
+import './Home.css'
+
+interface SocialMedia {
+  label: string
+  username: string
+  url?: string
+}
+
+const socialMedia: SocialMedia[] = [
+  {
+    label: 'Discord',
+    username: 'Xinto#9360',
+  },
+  {
+    label: 'GitHub',
+    username: 'X1nto',
+    url: 'https://github.com/X1nto',
+  },
+  {
+    label: 'Telegram',
+    username: '@X1nto',
+    url: 'https://t.me/X1nto',
+  },
+  {
+    label: 'Twitter',
+    username: '@X1nto',
+    url: 'https://twitter.com/X1nto',
+  },
+]
+
+export default function Home() {
+  return (
+    <div class="home">
+      <div class="home-container">
+        <div class="xinto">
+          <img src="/src/assets/xinto.png" />
+        </div>
+        <div class="home-info">
+          <h1>Hi, I'm Xinto</h1>
+          <p>
+            I'm a software engineer from Georgia (country) who loves everything
+            Kotlin and Android. You can find me on various social media:
+          </p>
+          <ul class="home-info-media">
+            <For each={socialMedia}>
+              {(media) => {
+                return (
+                  <li>
+                    {media.label}: <a href={media.url}>{media.username}</a>
+                  </li>
+                )
+              }}
+            </For>
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
