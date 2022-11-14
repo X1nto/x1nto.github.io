@@ -8,26 +8,30 @@ on:
   
 jobs:
   build:
-    name: Deploy
+    name: Build
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v2
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: "18"
-            cache: ${{ steps.detect-package-manager.outputs.manager }}
-        - run: npm install
-        - run: npm run build
-        - uses: actions/upload-pages-artifact@v1
-          with:
-            path: dist/
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - run: npm install
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist/
         
   deploy:
+    name: Deploy
     needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Deploy GitHub Pages
