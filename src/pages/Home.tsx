@@ -1,4 +1,4 @@
-import { For } from 'solid-js';
+import { createSignal, For, Match, Switch } from 'solid-js';
 import './Home.css';
 
 interface SocialMedia {
@@ -30,11 +30,23 @@ const socialMedia: SocialMedia[] = [
 ];
 
 export default function Home() {
+  const [xintoing, setXintoing] = createSignal(false);
   return (
     <div class="home">
       <div class="home-container">
         <div class="xinto">
-          <img src="xinto.png" />
+          <Switch>
+            <Match when={xintoing()}>
+              <video
+                autoplay
+                onended={() => setXintoing(false)}
+                src="xinto.mp4"
+              />
+            </Match>
+            <Match when={!xintoing()}>
+              <img src="xinto.png" onclick={() => setXintoing(true)} />
+            </Match>
+          </Switch>
         </div>
         <div class="home-info">
           <h1>Hi, I'm Xinto</h1>
