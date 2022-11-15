@@ -1,0 +1,35 @@
+.card {
+  outline: 1px solid var(--color-outline);
+  border-radius: 12px;
+  width: 250px;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.card:hover {
+  cursor: pointer;
+  background: var(--color-surface);
+  transform: translateY(-5px);
+}
+
+.card-img {
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px;
+}
+
+.card-info-description {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

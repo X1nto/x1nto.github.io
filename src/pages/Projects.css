@@ -1,0 +1,16 @@
+.project-container {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 50px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.project {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}

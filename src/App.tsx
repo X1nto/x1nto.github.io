@@ -4,6 +4,7 @@ import { Topbar, TopbarButton, TopbarLink } from './components/Topbar';
 import './App.css';
 
 const Home = lazy(() => import('./pages/Home'));
+const Projects = lazy(() => import('./pages/Projects'));
 
 export default function App() {
   const links: TopbarLink[] = [
@@ -26,6 +27,7 @@ export default function App() {
       <div class="pages">
         <Routes>
           <Route path="/" component={Home} />
+          <Route path="/projects" component={Projects} />
         </Routes>
       </div>
     </div>
