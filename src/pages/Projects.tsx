@@ -25,11 +25,11 @@ const cards = [
 
 export default function Projects() {
   return (
-    <div class="project">
-      <div class="project-header">
+    <div class="projects">
+      <div class="projects-header">
         <h1>My projects</h1>
       </div>
-      <div class="project-container">
+      <div class="projects-container">
         <For each={cards}>
           {(card) => {
             return (
