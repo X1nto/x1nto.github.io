@@ -1,7 +1,7 @@
-import { Component, createMemo, lazy } from 'solid-js';
+import { lazy } from 'solid-js';
 import { Route, Routes } from '@solidjs/router';
-import { Topbar, TopbarButton, TopbarLink } from './components/Topbar';
-import './App.css';
+import { Topbar, TopbarLink } from './components/Topbar';
+import style from './App.module.css';
 
 const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
@@ -24,9 +24,9 @@ export default function App() {
     },
   ];
   return (
-    <div class="app">
+    <div class={style.app}>
       <Topbar links={links} />
-      <div class="pages">
+      <div class={style.pages}>
         <Routes>
           <Route path="/" component={Home} />
           <Route path="/projects" component={Projects} />

@@ -1,6 +1,6 @@
 import { For } from 'solid-js';
-import Card, { CardProps } from '../components/Card';
-import './Projects.css';
+import Card from '../components/Card';
+import style from './Projects.module.css';
 
 const cards = [
   {
@@ -25,11 +25,11 @@ const cards = [
 
 export default function Projects() {
   return (
-    <div class="projects">
-      <div class="projects-header">
+    <div class={style.projects}>
+      <div>
         <h1>My projects</h1>
       </div>
-      <div class="projects-container">
+      <div class={style['projects-container']}>
         <For each={cards}>
           {(card) => {
             return (

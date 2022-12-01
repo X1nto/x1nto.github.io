@@ -1,5 +1,5 @@
 import { createSignal, For, Match, Switch } from 'solid-js';
-import './Home.css';
+import style from './Home.module.css';
 
 interface SocialMedia {
   label: string;
@@ -32,9 +32,9 @@ const socialMedia: SocialMedia[] = [
 export default function Home() {
   const [xintoing, setXintoing] = createSignal(false);
   return (
-    <div class="home">
-      <div class="home-container">
-        <div class="xinto">
+    <div class={style.home}>
+      <div class={style['home-container']}>
+        <div class={style.xinto}>
           <Switch>
             <Match when={xintoing()}>
               <video
@@ -48,13 +48,13 @@ export default function Home() {
             </Match>
           </Switch>
         </div>
-        <div class="home-info">
+        <div class={style['home-info']}>
           <h1>Hi, I'm Xinto</h1>
           <p>
             I'm a software engineer from Georgia (country) who loves everything
             Kotlin and Android. You can find me on various social media:
           </p>
-          <ul class="home-info-media">
+          <ul class={style['home-info-media']}>
             <For each={socialMedia}>
               {(media) => {
                 return (
