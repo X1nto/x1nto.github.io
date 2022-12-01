@@ -7,13 +7,13 @@ const cards = [
     title: 'Mauth',
     description: 'A modern 2FA app',
     img: 'shrek.jpg',
-    url: 'https://github.com/MateriApps/OpenCord',
+    url: 'https://github.com/X1nto/Mauth',
   },
   {
     title: 'OpenCord',
     description: 'An open-source Discord Android client',
     img: 'shrek.jpg',
-    url: 'https://github.com/X1nto/Mauth',
+    url: 'https://github.com/MateriApps/OpenCord',
   },
   {
     title: 'Taxi',
