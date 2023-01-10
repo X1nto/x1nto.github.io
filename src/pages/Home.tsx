@@ -44,7 +44,7 @@ export default function Home() {
               />
             </Match>
             <Match when={!xintoing()}>
-              <img src="xinto.png" onclick={() => setXintoing(true)} />
+              <img src="xinto.webp" onclick={() => setXintoing(true)} />
             </Match>
           </Switch>
         </div>
