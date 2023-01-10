@@ -9,7 +9,8 @@
   width: 100%;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   cursor: pointer;
   background: var(--color-surface);
   transform: translateY(-5px);
