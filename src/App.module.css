@@ -7,9 +7,12 @@
 }
 
 .pages {
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px;
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  .pages {
+    padding: 25px 150px;
+  }
 }
