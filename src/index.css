@@ -21,7 +21,7 @@
   }
 }
 
-body {
+:root {
   background-color: var(--color-background);
   font-family: 'Inter', system-ui, sans-serif;
   height: 100vh;
@@ -31,4 +31,8 @@ body {
 
 a {
   color: var(--color-on-background);
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', system-ui, sans-serif; }
 }
