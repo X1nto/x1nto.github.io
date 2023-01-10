@@ -20,18 +20,7 @@
   aspect-ratio: 1/1;
 }
 
-@media (min-width: 768px) {
-  .home-container {
-    flex-direction: row;
-  }
-
-  .xinto * {
-    width: 25rem;
-  }
-}
-
 .home-info {
-  flex-grow: 2;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -41,10 +30,25 @@
   gap: 0.3rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  padding-top: 2rem;
+  padding: 2rem 1rem 0;
 }
 
 .home-info-media > li {
   list-style: inside;
+}
+
+@media (min-width: 600px) {
+  .home-container {
+    flex-direction: row;
+  }
+
+  .xinto * {
+    width: 15rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .xinto * {
+    width: 20rem;
+  }
 }

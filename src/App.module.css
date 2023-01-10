@@ -16,6 +16,12 @@
   }
 
   .pages {
+    padding: 25px 75px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pages {
     padding: 25px 150px;
   }
 }
