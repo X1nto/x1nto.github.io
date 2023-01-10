@@ -32,7 +32,3 @@
 a {
   color: var(--color-on-background);
 }
-
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', system-ui, sans-serif; }
-}
