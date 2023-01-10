@@ -44,7 +44,7 @@ export default function Home() {
               />
             </Match>
             <Match when={!xintoing()}>
-              <img src="xinto.webp" onclick={() => setXintoing(true)} />
+              <img src="xinto.webp" alt="Xinto's profile picture" onclick={() => setXintoing(true)} />
             </Match>
           </Switch>
         </div>
@@ -59,7 +59,15 @@ export default function Home() {
               {(media) => {
                 return (
                   <li>
-                    {media.label}: <a href={media.url}>{media.username}</a>
+                    {media.label}:
+                    <Switch>
+                      <Match when={media.url}>
+                        <a href={media.url}>{media.username}</a>
+                      </Match>
+                      <Match when={true}>
+                        {media.username}
+                      </Match>
+                    </Switch>
                   </li>
                 );
               }}
