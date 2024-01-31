@@ -6,19 +6,19 @@ const cards = [
   {
     title: 'Mauth',
     description: 'A modern 2FA app',
-    img: 'shrek.jpg',
+    img: 'shrek.png',
     url: 'https://github.com/X1nto/Mauth',
   },
   {
     title: 'OpenCord',
     description: 'An open-source Discord Android client',
-    img: 'shrek.jpg',
+    img: 'shrek.png',
     url: 'https://github.com/MateriApps/OpenCord',
   },
   {
     title: 'Taxi',
     description: 'A simple navigator for Jetpack Compose',
-    img: 'shrek.jpg',
+    img: 'shrek.png',
     url: 'https://github.com/X1nto/Taxi',
   },
 ];
@@ -31,16 +31,14 @@ export default function Projects() {
       </div>
       <div class={style['projects-container']}>
         <For each={cards}>
-          {(card) => {
-            return (
-              <Card
-                title={card.title}
-                description={card.description}
-                img={card.img}
-                url={card.url}
-              />
-            );
-          }}
+          {(card) => (
+            <Card
+              title={card.title}
+              description={card.description}
+              img={card.img}
+              url={card.url}
+            />
+          )}
         </For>
       </div>
     </div>

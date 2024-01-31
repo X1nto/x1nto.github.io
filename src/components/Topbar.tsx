@@ -4,6 +4,7 @@ import './Topbar.css'
 
 export interface TopbarProps {
   links: TopbarLink[]
+  selected: string
 }
 
 export interface TopbarLink {
@@ -21,13 +22,11 @@ export function Topbar(props: TopbarProps) {
     <div class="topbar">
       <nav class="topbar-links">
         <For each={props.links}>
-          {(link) => {
-            return (
-              <A class="topbar-link" href={link.url}>
-                {link.label}
-              </A>
-            )
-          }}
+          {(link) => (
+            <A data-selected={props.selected === link.url} class="topbar-link" href={link.url}>
+              {link.label}
+            </A>
+          )}
         </For>
       </nav>
     </div>

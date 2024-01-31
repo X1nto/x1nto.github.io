@@ -2,15 +2,22 @@
 import { render } from 'solid-js/web';
 
 import './index.css';
+import { Route, Router } from '@solidjs/router';
 import App from './App';
-import { Router } from '@solidjs/router';
-import { createSignal } from 'solid-js';
+
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+import Project from './pages/Project'
+import About from './pages/About'
 
 render(() => {
   return (
     <div class="index">
-      <Router>
-        <App />
+      <Router root={App}>
+        <Route path="/" component={Home} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/projects/:project" component={Project} />
+        <Route path="/about" component={About} />
       </Router>
     </div>
   );

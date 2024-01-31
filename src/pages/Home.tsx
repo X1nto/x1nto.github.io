@@ -10,7 +10,7 @@ interface SocialMedia {
 const socialMedia: SocialMedia[] = [
   {
     label: 'Discord',
-    username: 'Xinto#9360',
+    username: '@xinto',
   },
   {
     label: 'GitHub',
@@ -59,13 +59,12 @@ export default function Home() {
               {(media) => {
                 return (
                   <li>
-                    {media.label}:
                     <Switch>
                       <Match when={media.url}>
-                        <a href={media.url}>{media.username}</a>
+                        {media.label}: <a href={media.url}>{media.username}</a>
                       </Match>
                       <Match when={true}>
-                        {media.username}
+                        {media.label}: {media.username}
                       </Match>
                     </Switch>
                   </li>
